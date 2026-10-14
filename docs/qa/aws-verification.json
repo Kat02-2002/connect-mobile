@@ -1,0 +1,123 @@
+{
+  "checkedAtPeru": "2026-10-14T15:07:42.548348-05:00",
+  "checks": [
+    {
+      "method": "POST",
+      "path": "login",
+      "status": 200,
+      "expected": 200,
+      "passed": true
+    },
+    {
+      "method": "GET",
+      "path": "salas",
+      "status": 200,
+      "expected": 200,
+      "passed": true
+    },
+    {
+      "method": "GET",
+      "path": "salas/6e975442-7646-4abd-a1e5-e46b992afb0e",
+      "status": 200,
+      "expected": 200,
+      "passed": true
+    },
+    {
+      "method": "GET",
+      "path": "reservas?usuarioId=74a9b0b9-b4fa-42de-8022-338c765cfce8",
+      "status": 200,
+      "expected": 200,
+      "passed": true
+    },
+    {
+      "method": "GET",
+      "path": "reservas/1ce8a4e1-1ba7-4776-a6eb-5b4f11bf6b84",
+      "status": 200,
+      "expected": 200,
+      "passed": true
+    },
+    {
+      "method": "GET",
+      "path": "salas/00000000-0000-0000-0000-000000000000",
+      "status": 404,
+      "expected": 404,
+      "passed": true
+    },
+    {
+      "method": "GET",
+      "path": "salas?sede=Oficina+Central&fecha=2026-10-15&horaInicio=16%3A00&horaFin=16%3A30&capacidad=1&equipamiento=Pantalla%2CVideoconferencia",
+      "status": 200,
+      "expected": 200,
+      "passed": true
+    },
+    {
+      "method": "POST",
+      "path": "reservas",
+      "status": 201,
+      "expected": 201,
+      "passed": true
+    },
+    {
+      "method": "POST",
+      "path": "reservas",
+      "status": 409,
+      "expected": 409,
+      "passed": true
+    },
+    {
+      "method": "GET",
+      "path": "reservas?usuarioId=74a9b0b9-b4fa-42de-8022-338c765cfce8",
+      "status": 200,
+      "expected": 200,
+      "passed": true
+    },
+    {
+      "method": "GET",
+      "path": "reservas/0f197081-5977-46b3-bb19-48014d65d494",
+      "status": 200,
+      "expected": 200,
+      "passed": true
+    },
+    {
+      "method": "GET",
+      "path": "salas?sede=Oficina+Central&fecha=2026-10-15&horaInicio=16%3A00&horaFin=16%3A30&capacidad=1&equipamiento=Pantalla%2CVideoconferencia",
+      "status": 200,
+      "expected": 200,
+      "passed": true
+    }
+  ],
+  "usuarioId": "74a9b0b9-b4fa-42de-8022-338c765cfce8",
+  "testReservation": {
+    "reservaId": "0f197081-5977-46b3-bb19-48014d65d494",
+    "usuarioId": "74a9b0b9-b4fa-42de-8022-338c765cfce8",
+    "salaId": "6e975442-7646-4abd-a1e5-e46b992afb0e",
+    "fecha": "2026-10-15",
+    "horaInicio": "16:00",
+    "horaFin": "16:30",
+    "estado": "CONFIRMADA",
+    "fechaCreacion": "2026-10-14T20:07:47.935847+00:00",
+    "sala": {
+      "salaId": "6e975442-7646-4abd-a1e5-e46b992afb0e",
+      "nombre": "Sala Lima",
+      "sede": "Oficina Central",
+      "piso": 3,
+      "capacidad": 8,
+      "equipamiento": [
+        "Pantalla",
+        "Videoconferencia"
+      ],
+      "imagenUrl": "",
+      "activa": true
+    }
+  },
+  "testCriteria": {
+    "sede": "Oficina Central",
+    "fecha": "2026-10-15",
+    "horaInicio": "16:00",
+    "horaFin": "16:30",
+    "capacidad": "1",
+    "equipamiento": "Pantalla,Videoconferencia"
+  },
+  "conflictingRoomExcludedAfterBooking": true,
+  "passed": true
+}
